@@ -94,8 +94,8 @@ const AddDetailsPopup = (props) => {
         // using URLS over real images for avatars as serving JPG images was not optimal (based on discussion with team)
         let exampleProfiles = [
             {avatar: 'https://randomuser.me/api/portraits/men/32.jpg', name: 'Carlos Antônio', expertise: 'Estudante (medicina)'},
-            {avatar: 'https://randomuser.me/api/portraits/women/30.jpg', name: 'Jussara Pesara', expertise: 'Fundadora da @3DVidas'},
-            {avatar: 'https://randomuser.me/api/portraits/men/4.jpg', name: 'Fernando Lopes', expertise: 'Gaitista, Neurocirurgião'},
+            {avatar: 'https://randomuser.me/api/portraits/women/30.jpg', name: 'Jussara Pesara', expertise: 'Fundadora da @3Dvidas'},
+            {avatar: 'https://randomuser.me/api/portraits/men/4.jpg', name: 'Fernando Lopes', expertise: 'Maker e Neurocirurgião'},
             {avatar: 'https://randomuser.me/api/portraits/women/51.jpg', name: 'Tamara S.P.', expertise: 'Mãe, Engenheira'}
         ];
 
@@ -164,7 +164,7 @@ const AddDetailsPopup = (props) => {
                             name="expertise"
                             ref={inputExpertiseRef}
                             value={expertise}
-                            placeholder="Head of Marketing at Acme, Inc"
+                            placeholder="Estudante"
                             onChange={(e) => {
                                 let expertiseText = e.target.value;
                                 setExpertiseCharsLeft(maxExpertiseChars - expertiseText.length);

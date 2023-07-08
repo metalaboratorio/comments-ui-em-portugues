@@ -50,7 +50,7 @@ const EditForm = ({comment, parent, close}) => {
     }, [parent, comment, dispatchAction]);
 
     const submitProps = {
-        submitText: 'Save',
+        submitText: 'Salvar',
         submitSize: 'small',
         submit
     };
