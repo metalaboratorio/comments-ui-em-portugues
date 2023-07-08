@@ -93,9 +93,9 @@ function UnpublishedComment({comment, openEditMode}) {
 
     let notPublishedMessage;
     if (admin && comment.status === 'hidden') {
-        notPublishedMessage = 'This comment has been hidden.';
+        notPublishedMessage = 'Esse comentário foi escondido.';
     } else {
-        notPublishedMessage = 'This comment has been removed.';
+        notPublishedMessage = 'Esse comentário foi apagado.';
     }
 
     const avatar = (<BlankAvatar />);
@@ -137,7 +137,7 @@ function EditedInfo({comment}) {
     }
     return (
         <span>
-            <span className="mx-[0.3em]">·</span>Edited
+            <span className="mx-[0.3em]">·</span>Editado
         </span>
     );
 }

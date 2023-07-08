@@ -9,7 +9,7 @@ const MainForm = ({commentsCount}) => {
     const {postId, dispatchAction} = useContext(AppContext);
 
     const config = {
-        placeholder: (commentsCount === 0 ? 'Start the conversation' : 'Join the discussion'),
+        placeholder: (commentsCount === 0 ? 'Iniciar a conversa' : 'Participe da discussão'),
         autofocus: false
     };
 
@@ -81,7 +81,7 @@ const MainForm = ({commentsCount}) => {
     const submitProps = {
         submitText: (
             <>
-                <span className="hidden sm:inline">Add </span><span className="capitalize sm:normal-case">comment</span>
+                <span className="hidden sm:inline">Comentar </span><span className="capitalize sm:normal-case"></span>
             </>
         ),
         submitSize: 'large',

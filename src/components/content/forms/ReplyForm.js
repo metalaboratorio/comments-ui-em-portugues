@@ -34,7 +34,7 @@ const ReplyForm = ({parent, close}) => {
     const submitProps = {
         submitText: (
             <>
-                <span className="hidden sm:inline">Add </span><span className="capitalize sm:normal-case">reply</span>
+                <span className="hidden sm:inline">Inserir </span><span className="capitalize sm:normal-case">resposta</span>
             </>
         ),
         submitSize: 'medium',

@@ -99,7 +99,7 @@ const FormEditor = ({submit, progress, setProgress, close, reduced, isOpen, edit
             </div>
             <div className="absolute bottom-[9px] right-[9px] flex space-x-4 transition-[opacity] duration-150">
                 {close &&
-                    <button type="button" onClick={close} className="ml-2.5 font-sans text-sm font-medium text-neutral-500 outline-0 dark:text-neutral-400">Cancel</button>
+                    <button type="button" onClick={close} className="ml-2.5 font-sans text-sm font-medium text-neutral-500 outline-0 dark:text-neutral-400">Cancelar</button>
                 }
                 <button
                     className={`flex w-auto items-center justify-center sm:w-[128px] ${submitSize === 'medium' && 'sm:w-[100px]'} ${submitSize === 'small' && 'sm:w-[64px]'} h-[39px] rounded-[6px] border bg-neutral-900 px-3 py-2 text-center font-sans text-sm font-semibold text-white outline-0 transition-[opacity] duration-150 dark:bg-[rgba(255,255,255,0.9)] dark:text-neutral-800`}
@@ -139,7 +139,7 @@ const FormHeader = ({show, name, expertise, editName, editExpertise}) => {
                     className={`group flex max-w-[80%] items-center justify-start whitespace-nowrap text-left font-sans text-[14px] tracking-tight text-[rgba(0,0,0,0.5)] transition duration-150 hover:text-[rgba(0,0,0,0.75)] dark:text-[rgba(255,255,255,0.5)] dark:hover:text-[rgba(255,255,255,0.4)] sm:max-w-[90%] ${!expertise && 'text-[rgba(0,0,0,0.3)] hover:text-[rgba(0,0,0,0.5)] dark:text-[rgba(255,255,255,0.3)]'}`}
                     onClick={editExpertise}
                 >
-                    <span className="... overflow-hidden text-ellipsis">{expertise ? expertise : 'Add your expertise'}</span>
+                    <span className="... overflow-hidden text-ellipsis">{expertise ? expertise : 'Insira aqui a sua profissão/ocupação/área de interesse'}</span>
                     {expertise && <EditIcon className="ml-1 h-[12px] w-[12px] -translate-x-[6px] stroke-[rgba(0,0,0,0.5)] opacity-0 transition-all duration-100 ease-out group-hover:translate-x-0 group-hover:stroke-[rgba(0,0,0,0.75)] group-hover:opacity-100 dark:stroke-[rgba(255,255,255,0.5)] dark:group-hover:stroke-[rgba(255,255,255,0.3)]" />}
                 </button>
             </div>

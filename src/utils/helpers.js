@@ -38,36 +38,36 @@ export function formatRelativeTime(dateString) {
     // Diff is in seconds
     let diff = Math.round((now.getTime() - date.getTime()) / 1000);
     if (diff < 5) {
-        return 'Just now';
+        return 'Ainda agora';
     }
 
     if (diff < 60) {
-        return `${diff} seconds ago`;
+        return `${diff} segundos atrás`;
     }
 
     // Diff in minutes
     diff = diff / 60;
     if (diff < 60) {
         if (Math.floor(diff) === 1) {
-            return `One minute ago`;
+            return `Um minuto atrás`;
         }
-        return `${Math.floor(diff)} minutes ago`;
+        return `${Math.floor(diff)} minutos atrás`;
     }
 
     // First check for yesterday
     // (we ignore setting 'yesterday' if close to midnight and keep using minutes until 1 hour difference)
     const yesterday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
     if (date.getFullYear() === yesterday.getFullYear() && date.getMonth() === yesterday.getMonth() && date.getDate() === yesterday.getDate()) {
-        return 'Yesterday';
+        return 'Ontem';
     }
 
     // Diff in hours
     diff = diff / 60;
     if (diff < 24) {
         if (Math.floor(diff) === 1) {
-            return `One hour ago`;
+            return `Uma hora atrás`;
         }
-        return `${Math.floor(diff)} hours ago`;
+        return `${Math.floor(diff)} horas atrás`;
     }
 
     // Diff in days
@@ -75,25 +75,25 @@ export function formatRelativeTime(dateString) {
     if (diff < 7) {
         if (Math.floor(diff) === 1) {
             // Special case, we should compare based on dates in the future instead
-            return `One day ago`;
+            return `Um dia atrás`;
         }
-        return `${Math.floor(diff)} days ago`;
+        return `${Math.floor(diff)} dias atrás`;
     }
 
     // Diff in weeks
     diff = diff / 7;
     if (Math.floor(diff) === 1) {
         // Special case, we should compare based on dates in the future instead
-        return `One week ago`;
+        return `Uma semana atrás`;
     }
-    return `${Math.floor(diff)} weeks ago`;
+    return `${Math.floor(diff)} semanas atrás`;
 }
 
 export function formatExplicitTime(dateString) {
     const date = new Date(dateString);
 
-    let day = date.toLocaleDateString('en-us', {day: '2-digit'}); // eg. 01
-    let month = date.toLocaleString('en-us', {month: 'short'}); // eg. Jan
+    let day = date.toLocaleDateString('pt-br', {day: '2-digit'}); // eg. 01
+    let month = date.toLocaleString('pt-br', {month: 'short'}); // eg. Jan
     let year = date.getFullYear(); // eg. 2022
     let hour = (date.getHours() < 10 ? '0' : '') + date.getHours(); // eg. 02
     let minute = (date.getMinutes() < 10 ? '0' : '') + date.getMinutes(); // eg. 09

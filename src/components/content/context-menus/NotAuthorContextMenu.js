@@ -15,7 +15,7 @@ const NotAuthorContextMenu = ({comment, close}) => {
     return (
         <div className="flex flex-col">
             <button type="button" className="w-full text-left text-[14px]" onClick={openModal}>
-                <span>Report </span><span className="hidden sm:inline">comment</span>
+                <span>Denunciar </span><span className="hidden sm:inline">comentário</span>
             </button>
         </div>
     );

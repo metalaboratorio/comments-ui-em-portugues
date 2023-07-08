@@ -38,7 +38,7 @@ const AddDetailsPopup = (props) => {
             });
             close(true);
         } else {
-            setError({name: 'Enter your name'});
+            setError({name: 'Escreva o seu nome'});
             setName('');
             inputNameRef.current?.focus();
         }
@@ -93,10 +93,10 @@ const AddDetailsPopup = (props) => {
 
         // using URLS over real images for avatars as serving JPG images was not optimal (based on discussion with team)
         let exampleProfiles = [
-            {avatar: 'https://randomuser.me/api/portraits/men/32.jpg', name: 'James Fletcher', expertise: 'Full-time parent'},
-            {avatar: 'https://randomuser.me/api/portraits/women/30.jpg', name: 'Naomi Schiff', expertise: 'Founder @ Acme Inc'},
-            {avatar: 'https://randomuser.me/api/portraits/men/4.jpg', name: 'Franz Tost', expertise: 'Neurosurgeon'},
-            {avatar: 'https://randomuser.me/api/portraits/women/51.jpg', name: 'Katrina Klosp', expertise: 'Local resident'}
+            {avatar: 'https://randomuser.me/api/portraits/men/32.jpg', name: 'Carlos Antônio', expertise: 'Estudante (medicina)'},
+            {avatar: 'https://randomuser.me/api/portraits/women/30.jpg', name: 'Jussara Pesara', expertise: 'Fundadora da @3DVidas'},
+            {avatar: 'https://randomuser.me/api/portraits/men/4.jpg', name: 'Fernando Lopes', expertise: 'Gaitista, Neurocirurgião'},
+            {avatar: 'https://randomuser.me/api/portraits/women/51.jpg', name: 'Tamara S.P.', expertise: 'Mãe, Engenheira'}
         ];
 
         for (let i = 0; i < exampleProfiles.length; i++) {
@@ -117,11 +117,11 @@ const AddDetailsPopup = (props) => {
                     </div>
                 }
                 <div className={`${isMobile() ? 'w-full' : 'w-[60%]'} p-0 sm:p-8`}>
-                    <h1 className="mb-1 text-center font-sans text-[24px] font-bold tracking-tight text-black sm:text-left">Complete your profile<span className="hidden sm:inline">.</span></h1>
-                    <p className="text-base pr-0 text-center font-sans leading-9 text-neutral-500 sm:pr-10 sm:text-left">Add context to your comment, share your name and expertise to foster a healthy discussion.</p>
+                    <h1 className="mb-1 text-center font-sans text-[24px] font-bold tracking-tight text-black sm:text-left">Complete o seu perfil<span className="hidden sm:inline">.</span></h1>
+                    <p className="text-base pr-0 text-center font-sans leading-9 text-neutral-500 sm:pr-10 sm:text-left">Insira contexto ao seu comentário! Compartilhe o seu nome e sua profissão, ocupação ou principal área de interesse para fomentarmos uma discussão mais saudável.</p>
                     <section className="mt-8 text-left">
                         <div className="mb-2 flex flex-row justify-between">
-                            <label htmlFor="comments-name" className="font-sans text-[1.3rem] font-semibold">Name</label>
+                            <label htmlFor="comments-name" className="font-sans text-[1.3rem] font-semibold">Nome</label>
                             <Transition
                                 show={!!error.name}
                                 enter="transition duration-300 ease-out"
@@ -154,8 +154,8 @@ const AddDetailsPopup = (props) => {
                             maxLength="64"
                         />
                         <div className="mb-2 mt-6 flex flex-row justify-between">
-                            <label htmlFor="comments-name" className="font-sans text-[1.3rem] font-semibold">Expertise</label>
-                            <div className={`font-sans text-[1.3rem] text-neutral-400 ${(expertiseCharsLeft === 0) && 'text-red-500'}`}><b>{expertiseCharsLeft}</b> characters left</div>
+                            <label htmlFor="comments-name" className="font-sans text-[1.3rem] font-semibold">Profissão, Ocupação ou Área de interesse</label>
+                            <div className={`font-sans text-[1.3rem] text-neutral-400 ${(expertiseCharsLeft === 0) && 'text-red-500'}`}><b>{expertiseCharsLeft}</b> </div>
                         </div>
                         <input
                             id="comments-expertise"
@@ -184,7 +184,7 @@ const AddDetailsPopup = (props) => {
                             style={{backgroundColor: accentColor ?? '#000000'}}
                             onClick={submit}
                         >
-                            Save
+                            Inserir
                         </button>
                     </section>
                 </div>
